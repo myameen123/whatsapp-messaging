@@ -11,6 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "successfully connected" });
+});
 app.use("/api/messages", messageRouter);
 app.get("/api/connect", connectWhatsApp); // Connect to WhatsApp
 
