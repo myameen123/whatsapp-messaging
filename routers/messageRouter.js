@@ -3,7 +3,7 @@ const express = require("express");
 const { sendMessage } = require("../controllers/messageController");
 const multer = require("multer");
 
-const upload = multer({ dest: "uploads/" }); // Directory for storing uploaded files
+const upload = multer({}); // Directory for storing uploaded files
 
 const router = express.Router();
 
