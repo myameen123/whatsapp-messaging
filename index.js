@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.get("/", (req, res) => {
+  console.log("logging....");
   res.status(200).json({ message: "successfully connected" });
 });
 app.use("/api/messages", messageRouter);
